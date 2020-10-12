@@ -13,6 +13,8 @@
       exact
       class="link"
     >Users</router-link>
+    <button @click="increment">+1</button>
+    <button @click="decrement">-1</button>
   </nav>
 </template>
 
@@ -25,3 +27,16 @@
     font-size: 20px;
   }
 </style>
+
+<script>
+export default {
+  methods: {
+    increment() {
+      this.$store.state.count ++;
+    },
+    decrement() {
+      this.$store.state.count --;
+    },
+  }
+}
+</script>
